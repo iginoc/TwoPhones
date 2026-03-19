@@ -11,6 +11,7 @@
         android:id="@+id/gameArea"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:focusable="false"
         app:layout_constraintBottom_toTopOf="@+id/bottomBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,7 +20,9 @@
         <ListView
             android:id="@+id/deviceList"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:nextFocusDown="@+id/btnExit" />
 
         <View
             android:id="@+id/redBall"
@@ -38,53 +41,62 @@
         android:layout_height="wrap_content"
         android:background="#EEEEEE"
         android:padding="8dp"
+        android:focusable="false"
         app:layout_constraintBottom_toBottomOf="parent">
 
         <LinearLayout
+            android:id="@+id/buttonContainer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:focusable="false">
 
             <Button
                 android:id="@+id/btnExit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
-                android:text="Esci" />
+                android:text="Esci"
+                android:nextFocusUp="@+id/deviceList" />
 
             <Button
                 android:id="@+id/btnGame1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
-                android:text="Pallina" />
+                android:text="Pallina"
+                android:nextFocusUp="@+id/deviceList" />
 
             <Button
                 android:id="@+id/btnGame2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
-                android:text="Snake" />
+                android:text="Snake"
+                android:nextFocusUp="@+id/deviceList" />
 
             <Button
                 android:id="@+id/btnGame3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
-                android:text="Navi" />
+                android:text="Navi"
+                android:nextFocusUp="@+id/deviceList" />
 
             <Button
                 android:id="@+id/btnGame4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
-                android:text="Gioco 4" />
+                android:text="Pong"
+                android:nextFocusUp="@+id/deviceList" />
 
             <Button
                 android:id="@+id/btnGame5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Gioco 5" />
+                android:text="Kart"
+                android:nextFocusUp="@+id/deviceList" />
 
         </LinearLayout>
     </HorizontalScrollView>
